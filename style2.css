@@ -23,18 +23,26 @@ li a {
 * {
    margin: 0;
 }
-.navbar-lg {
+nav {
    background-color: black;
-   
+   display: block;
+   align-content: center;
 }
-.nav-container{
-  padding: 0.6em 7em;
+
+.mobile-nav {
+   display: none;
 }
-.navbar-nav {
+
+.nav-navbar{
+   display: flex;
+}
+.nav-contents {
    display: flex;
    justify-content: space-evenly;
    align-items: center;
+   padding: 0.5em 7em;
 }
+
 .nav-link{
    text-decoration: none;
    color: white;
@@ -44,9 +52,44 @@ li a {
    margin: 0;
    padding: 0;
 }
-.navbar-brand img{
-   width: 20px;
+.nav-brand img{
+   width: 23px;
 }
 @media screen and (max-width: 840px) {
+   .mobile-nav {
+      display: flex;
+      align-items: center;
+   }
+   .bars {
+      color: wheat;
+      right: 0;
+      width: 10%;
+      display: flex;
+      justify-content: center;
+   }
+   .fa-bars {
+      cursor: pointer;
+      border: solid 1px red;
+
+   }
+   .nav-brand {
+      width: 80%;
+      display: flex;
+      justify-content: center;
+   }
+   .nav-contents {
+      display: none;
+      position: absolute;
+      background: black;
+      min-width: 300px;
+      height: 400px;
+      z-index: 100;
+
+   }
+   .mobile-nav {
+      display: flex;
+      align-items: center;
+      padding: 0.5em 0;
+   }
    
 }
